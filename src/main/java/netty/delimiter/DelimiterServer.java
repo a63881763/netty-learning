@@ -26,7 +26,7 @@ public class DelimiterServer implements Runnable{
     @Override
     public void run(){
 
-        Integer homeDotPort = 5710;
+        Integer homeDotPort = Constants.DELIMITERPORT;
         //Integer homeDotPort = 5600;
 
         System.err.println("Start server at port:" + homeDotPort);
@@ -41,7 +41,7 @@ public class DelimiterServer implements Runnable{
                     //.handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new DelimiterServerInitializer())
                     .childOption(ChannelOption.AUTO_READ, true)
-                    .option(ChannelOption.SO_BACKLOG, 128)
+                    .option(ChannelOption.SO_BACKLOG, 1024)
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
                     .bind(homeDotPort).sync().channel().closeFuture().sync();
         }catch (Exception e){

@@ -5,5 +5,7 @@ public class Constants {
 
     public static int PORT = 8900;
 
-    public static byte DELIMITER = 0x03;
+    public static int DELIMITERPORT = 5710;
+
+    public static String DELIMITER = "$_";
 }

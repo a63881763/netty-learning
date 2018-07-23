@@ -18,9 +18,7 @@ public class DelimiterClient {
 
     public void connect(String host, int port) throws InterruptedException {
 
-        byte delimiter = 0x03;
-        ByteBuf byteBuf = Unpooled.buffer(1);
-        byteBuf.writeByte(delimiter);
+        ByteBuf byteBuf = Unpooled.copiedBuffer(Constants.DELIMITER.getBytes());
 
         EventLoopGroup group = new NioEventLoopGroup();
         try {
@@ -33,17 +31,15 @@ public class DelimiterClient {
                         protected void initChannel(SocketChannel ch) throws Exception {
 
                             ChannelPipeline p = ch.pipeline();
-                            p.addLast(new DelimiterBasedFrameDecoder(6144, byteBuf));
+//                            p.addLast(new DelimiterBasedFrameDecoder(6144, byteBuf));
                             p.addLast(new StringDecoder());
-                            p.addLast(new StringEncoder());
-
                             p.addLast(new DelimiterClientHandler());
                         }
                     });
 
-            ChannelFuture future = b.connect(Constants.HOST, Constants.PORT).sync();
+            Channel channel = b.connect(host, port).sync().channel();
 
-            future.channel().closeFuture().sync();
+            channel.closeFuture().sync();
         } finally {
             group.shutdownGracefully();
         }
@@ -51,6 +47,6 @@ public class DelimiterClient {
 
     public static void main(String[] args) throws Exception {
 
-        new DelimiterClient().connect("127.0.0.1", Constants.PORT);
+        new DelimiterClient().connect("127.0.0.1", Constants.DELIMITERPORT);
     }
 }
