@@ -81,9 +81,14 @@
         </dependency>
 
         <dependency>
-            <groupId>io.lettuce</groupId>
-            <artifactId>lettuce-core</artifactId>
-            <version>5.0.4.RELEASE</version>
+            <groupId>biz.paluch.redis</groupId>
+            <artifactId>lettuce</artifactId>
+            <version>4.4.2.Final</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.lettuce</groupId>-->
+            <!--<artifactId>lettuce-core</artifactId>-->
+            <!--<version>5.0.5.RELEASE</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

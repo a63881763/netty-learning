@@ -9,6 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class NettyServer {
     private static final int port = 9876; //设置服务端端口
     private static EventLoopGroup group = new NioEventLoopGroup();   // 通过nio方式来接收连接和处理连接
+    private static EventLoopGroup wordgroup = new NioEventLoopGroup();   // 通过nio方式来接收连接和处理连接
     private static ServerBootstrap b = new ServerBootstrap();
 
     /**
@@ -17,7 +18,7 @@ public class NettyServer {
      **/
     public static void main(String[] args) throws InterruptedException {
         try {
-            b.group(group);
+            b.group(group, wordgroup);
             b.channel(NioServerSocketChannel.class);
             b.childHandler(new NettyServerFilter()); //设置过滤器
             // 服务器绑定端口监听
