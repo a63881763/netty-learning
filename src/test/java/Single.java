@@ -5,6 +5,8 @@ import com.lambdaworks.redis.RedisURI;
 import com.lambdaworks.redis.api.StatefulRedisConnection;
 import com.lambdaworks.redis.api.async.RedisAsyncCommands;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Single
 {
 
@@ -29,14 +31,17 @@ public class Single
                 try {
 
                     RedisFuture<Boolean> redisFuture = cmd.hset("maizi", "haha", i + "");
-                    System.out.println(redisFuture);
+//                    System.out.println(redisFuture);
                 } catch (Exception e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
+
                 }
             }
 
             Thread.sleep(10);
+
         }
+        System.out.println("===================");
 
         Thread.sleep(10000);
         for(int a = 0; a < 1; a++) {

@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d7184c-05e7-4072-af88-97e5aec4dfea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/http/ByteBufToBytes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/http/HttpClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/http/HttpClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/http/HttpServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/http/HttpServerHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Single.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Single.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/ByteBufToBytes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/http/HttpServerHandler.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,11 +70,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandHandler.class" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Single.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Single.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandHandler.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/protocol/CommandHandler.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="329" column="13" lean-forward="true" selection-start-line="329" selection-start-column="13" selection-end-line="329" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="618" selection-start-line="618" selection-end-line="618" />
               <folding>
                 <element signature="e#39865#39866#0" expanded="true" />
                 <element signature="e#39921#39922#0" expanded="true" />
@@ -114,15 +113,6 @@
                 <element signature="e#2995#2996#0" expanded="true" />
                 <element signature="e#3034#3035#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisCommand.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/protocol/RedisCommand.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,6 +147,7 @@
       <find>queue</find>
       <find>stack</find>
       <find>QUEUE_SIZE</find>
+      <find>stack s</find>
     </findStrings>
     <dirStrings>
       <dir>D:\software\repository\biz\paluch\redis\lettuce\4.4.2.Final\lettuce-4.4.2.Final.jar!\com\lambdaworks\redis</dir>
@@ -543,7 +534,7 @@
       <workItem from="1532004754610" duration="12359000" />
       <workItem from="1532082706052" duration="23826000" />
       <workItem from="1532943413888" duration="6416000" />
-      <workItem from="1533003260977" duration="46460000" />
+      <workItem from="1533003260977" duration="48794000" />
     </task>
     <task id="LOCAL-00001" summary="delimiter">
       <created>1532086288034</created>
@@ -580,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533300438004</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Lettuce debug">
+      <created>1533522911484</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1533522911484</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -616,7 +614,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91191000" />
+    <option name="totallyTimeSpent" value="93525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -664,13 +662,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Lettuce debug" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final.jar!/io/netty/handler/timeout/IdleState.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -982,16 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Single.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/RedisCommandBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1038,13 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/AbstractRedisAsyncCommands.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="1583" column="63" selection-start-line="1583" selection-start-column="63" selection-end-line="1583" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/api/StatefulConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1073,13 +1047,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/ClientOptions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding>
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/AbstractRedisAsyncCommands.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="1583" column="63" selection-start-line="1583" selection-start-column="63" selection-end-line="1583" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/biz/paluch/redis/lettuce/4.4.2.Final/lettuce-4.4.2.Final.jar!/com/lambdaworks/redis/protocol/CommandHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="329" column="13" lean-forward="true" selection-start-line="329" selection-start-column="13" selection-end-line="329" selection-end-column="13" />
+        <state relative-caret-position="418">
+          <caret line="618" selection-start-line="618" selection-end-line="618" />
           <folding>
             <element signature="e#39865#39866#0" expanded="true" />
             <element signature="e#39921#39922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Single.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
