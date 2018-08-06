@@ -23,11 +23,11 @@
     <dependencies>
         <!-- Netty开始 -->
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.6.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-all</artifactId>-->
+            <!--<version>4.1.6.Final</version>-->
+        <!--</dependency>-->
         <!-- Netty结束 -->
 
         <!-- 映入JSON -->
