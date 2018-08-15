@@ -21,7 +21,7 @@ public class NettyClient {
         System.out.println("客户端成功启动...");
         b.group(group);
         b.channel(NioSocketChannel.class);
-        b.handler(new NettyClientFilter());
+        b.handler(new NettyClientInitializer());
         // 连接服务端
         ch = b.connect(host, port).sync().channel();
         star();

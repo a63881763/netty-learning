@@ -23,11 +23,11 @@
     <dependencies>
         <!-- Netty开始 -->
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-        <!--<dependency>-->
-            <!--<groupId>io.netty</groupId>-->
-            <!--<artifactId>netty-all</artifactId>-->
-            <!--<version>4.1.6.Final</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.17.Final</version>
+        </dependency>
         <!-- Netty结束 -->
 
         <!-- 映入JSON -->
@@ -80,11 +80,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>biz.paluch.redis</groupId>
-            <artifactId>lettuce</artifactId>
-            <version>4.4.2.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>biz.paluch.redis</groupId>-->
+            <!--<artifactId>lettuce</artifactId>-->
+            <!--<version>4.4.5.Final</version>-->
+        <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>io.lettuce</groupId>-->
             <!--<artifactId>lettuce-core</artifactId>-->
