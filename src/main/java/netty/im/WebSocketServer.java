@@ -21,8 +21,7 @@ public class WebSocketServer {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
 
-            System.out.println("WebsocketChatServer 启动了");
-            System.err.println("蚂蚁课堂Netty课程：www.itmayiedu.com");
+            System.err.println("WebsocketChatServer start");
             // 绑定端口，开始接收进来的连接
             ChannelFuture f = b.bind(Constants.IMPORT).sync();
             // 让服务器不会立马关闭
@@ -30,7 +29,7 @@ public class WebSocketServer {
         } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
-            System.out.println("WebsocketChatServer 关闭了");
+            System.err.println("WebsocketChatServer close");
         }
     }
 }
