@@ -28,7 +28,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 
 //    private final ByteBuf firstMessage;
-    private static volatile int index = 0;
+    private static volatile int index = 1;
 //    /**
 //     * Creates a client-side handler.
 //     */
@@ -47,6 +47,7 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         if(index > 10){
+            System.out.println("=================");
             System.out.println("10 times");
             return;
         }
