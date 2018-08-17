@@ -1,12 +1,10 @@
 package netty.protobuf;
 
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import pojo.SubscribeReqProto;
 import pojo.SubscribeRespProto;
 
-@ChannelHandler.Sharable
 public class SubReqServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
@@ -15,6 +13,7 @@ public class SubReqServerHandler extends ChannelInboundHandlerAdapter {
         if("liwenliang".equalsIgnoreCase(req.getUserName())){
             System.out.println("Service accept client subscribe req : [" + req.toString() + "]");
             ctx.writeAndFlush(resp(req.getSubReqID()));
+            System.out.println("=======");
         }
     }
 
