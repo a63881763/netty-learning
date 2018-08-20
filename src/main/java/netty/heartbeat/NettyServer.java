@@ -20,7 +20,7 @@ public class NettyServer {
         try {
             b.group(group, wordgroup);
             b.channel(NioServerSocketChannel.class);
-            b.childHandler(new NettyServerFilter()); //设置过滤器
+            b.childHandler(new NettyServerInitializer()); //设置过滤器
             // 服务器绑定端口监听
             ChannelFuture f = b.bind(port).sync();
             System.out.println("服务端启动成功,端口是:"+port);
