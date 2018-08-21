@@ -19,7 +19,7 @@ public class DelimiterServerInitializer extends ChannelInitializer<SocketChannel
         ByteBuf byteBuf = Unpooled.copiedBuffer(Constants.DELIMITER.getBytes());
 
         ch.pipeline().addLast(
-                //分隔符解码器，以JSON后的0x03为分隔符进行帧分割，最大长度6KB
+                //分隔符解码器，最大长度6KB
                 new DelimiterBasedFrameDecoder(6144,byteBuf),
 
                 //字符串识别，将比特流转换成字符串，可选传入字符串编码参数

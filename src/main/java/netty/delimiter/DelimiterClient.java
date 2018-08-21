@@ -31,7 +31,7 @@ public class DelimiterClient {
                         protected void initChannel(SocketChannel ch) throws Exception {
 
                             ChannelPipeline p = ch.pipeline();
-//                            p.addLast(new DelimiterBasedFrameDecoder(6144, byteBuf));
+                            p.addLast(new DelimiterBasedFrameDecoder(6144, byteBuf));
                             p.addLast(new StringDecoder());
                             p.addLast(new DelimiterClientHandler());
                         }
