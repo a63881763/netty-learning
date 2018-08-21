@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
     /** 客户端请求的心跳命令  */
-    private static final ByteBuf HEARTBEAT_SEQUENCE = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("hb_request",
+    private static final ByteBuf HEARTBEAT_SEQUENCE = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("heartbeat_request",
             CharsetUtil.UTF_8));
 
     /** 空闲次数 */
@@ -29,8 +29,11 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("建立连接时："+new Date());
+        System.out.println("建立连接时：" + new Date());
         ctx.fireChannelActive();
+        String str = "Hello Netty";
+        ctx.writeAndFlush(str);
+        System.out.println("客户端发送数据:" + str);
     }
 
     /**
@@ -38,7 +41,7 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
      */
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("关闭连接时："+new Date());
+        System.out.println("关闭连接时：" + new Date());
     }
 
     /**
@@ -51,8 +54,10 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
         System.out.println("循环请求的时间："+new Date()+"，次数"+fcount);
         if (obj instanceof IdleStateEvent) {
             IdleStateEvent event = (IdleStateEvent) obj;
-            if (IdleState.WRITER_IDLE.equals(event.state())) {  //如果写通道处于空闲状态,就发送心跳命令
-                if(idle_count <= 3){   //设置发送次数
+            //如果写通道处于空闲状态,就发送心跳命令
+            if (IdleState.WRITER_IDLE.equals(event.state())) {
+                //设置发送次数
+                if(idle_count <= 3){
                     idle_count++;
                     ctx.channel().writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
                 }else{
@@ -68,7 +73,7 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("第"+count+"次"+",客户端接受的消息:"+msg);
+        System.out.println("第" + count + "次" + ",客户端接受的消息:" + msg);
         count++;
     }
 }

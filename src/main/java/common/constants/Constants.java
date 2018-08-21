@@ -9,6 +9,8 @@ public class Constants {
 
     public static int DELIMITERPORT = 5710;
 
+    public static int HEARTBEATPORT = 9876;
+
     public static int PROTOPORT = 8010;
 
     public static String DELIMITER = "$_";

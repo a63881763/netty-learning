@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d7184c-05e7-4072-af88-97e5aec4dfea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/netty/heartbeat/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/netty/heartbeat/NettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,21 +25,35 @@
       <file leaf-file-name="NettyServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+            <state relative-caret-position="132">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
+      <file leaf-file-name="NettyClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding>
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="418">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NettyClientHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="57" column="62" lean-forward="true" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/constants/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -64,20 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DelimiterClientHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DelimiterClientHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DelimiterServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -158,7 +161,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/netty/http2/tiles/Html.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServerFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/NettyClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/NettyClientFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/NettyClient.java" />
@@ -169,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/main/java/common/util/JsonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/util/JsonMessageDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/http/HttpClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/http/HttpServerHandler.java" />
@@ -177,7 +178,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Single2.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/im/WebSocketServerInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/name.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/data/name" />
@@ -196,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pojo/SubscribeRespProto.java" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/SubscribeReqProto.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestProto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/protobuf/SubReqServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/protobuf/SubReqClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/protobuf/SubReqClient.java" />
@@ -207,6 +206,10 @@
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java" />
       </list>
     </option>
   </component>
@@ -273,6 +276,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="netty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -283,6 +303,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="netty" type="462c0819:PsiDirectoryNode" />
               <item name="delimiter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="echo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netty-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="netty-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="heartbeat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netty-learning" type="b2602c69:ProjectViewProjectNode" />
@@ -396,7 +434,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DelimiterClient">
+  <component name="RunManager" selected="Application.NettyClient">
     <configuration name="DelimiterClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="netty.delimiter.DelimiterClient" />
       <module name="netty" />
@@ -508,11 +546,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NettyClient" />
+        <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.DelimiterClient" />
         <item itemvalue="Application.DelimiterServer" />
         <item itemvalue="JUnit.test.testMap" />
-        <item itemvalue="Application.NettyClient" />
-        <item itemvalue="Application.NettyServer" />
       </list>
     </recent_temporary>
   </component>
@@ -531,7 +569,7 @@
       <workItem from="1532082706052" duration="23826000" />
       <workItem from="1532943413888" duration="6416000" />
       <workItem from="1533003260977" duration="65244000" />
-      <workItem from="1533697578867" duration="75781000" />
+      <workItem from="1533697578867" duration="76645000" />
     </task>
     <task id="LOCAL-00001" summary="delimiter">
       <created>1532086288034</created>
@@ -638,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534745980114</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="heartbeat">
+      <created>1534836051446</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1534836051446</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -674,7 +719,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185756000" />
+    <option name="totallyTimeSpent" value="186620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -884,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar!/io/netty/channel/ChannelHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1037,13 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1051,35 +1082,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="656" selection-start-line="656" selection-end-line="656" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,13 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -1125,10 +1124,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding>
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/netty/delimiter/DelimiterClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/netty/heartbeat/NettyClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="57" column="62" lean-forward="true" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
         </state>
       </provider>
     </entry>
