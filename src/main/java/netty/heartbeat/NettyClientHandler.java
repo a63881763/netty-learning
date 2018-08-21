@@ -21,8 +21,6 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
     /** 发送次数 */
     private int count = 1;
 
-    /**循环次数 */
-    private int fcount = 1;
 
     /**
      * 建立连接时
@@ -51,19 +49,20 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter{
      */
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object obj) throws Exception {
-        System.out.println("循环请求的时间："+new Date()+"，次数"+fcount);
+
         if (obj instanceof IdleStateEvent) {
             IdleStateEvent event = (IdleStateEvent) obj;
             //如果写通道处于空闲状态,就发送心跳命令
             if (IdleState.WRITER_IDLE.equals(event.state())) {
                 //设置发送次数
                 if(idle_count <= 3){
-                    idle_count++;
                     ctx.channel().writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
+                    System.out.println("发送心跳，次数"+idle_count);
+                    idle_count++;
                 }else{
                     System.out.println("不再发送心跳请求了！");
                 }
-                fcount++;
+
             }
         }
     }
