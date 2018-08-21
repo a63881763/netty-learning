@@ -10,6 +10,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
@@ -25,12 +26,13 @@ public class DelimiterClient {
             Bootstrap b = new Bootstrap();
             b.group(group)
                     .channel(NioSocketChannel.class)
-                    .option(ChannelOption.TCP_NODELAY, true)
+//                    .option(ChannelOption.TCP_NODELAY, true)
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
 
                             ChannelPipeline p = ch.pipeline();
+//                            p.addLast(new LineBasedFrameDecoder(1024));
                             p.addLast(new DelimiterBasedFrameDecoder(6144, byteBuf));
                             p.addLast(new StringDecoder());
                             p.addLast(new DelimiterClientHandler());

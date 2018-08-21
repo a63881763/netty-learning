@@ -10,16 +10,26 @@ import java.util.Date;
 
 public class DelimiterClientHandler extends ChannelInboundHandlerAdapter {
 
+    private static final String text = "白日依山尽，黄河入海流。欲穷千里目，更上一层楼。";
+
+//    private static final String text = "{a:1,b:2}{c:3,d:4}";
     /**
      * 建立连接时
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("建立连接时："+new Date());
-//        ctx.fireChannelActive();
-        byte[] req  = ("Hello Server"+Constants.DELIMITER).getBytes();
-        ByteBuf message = Unpooled.buffer(req.length).writeBytes(req);
-        ctx.writeAndFlush(message);
+        ctx.fireChannelActive();
+        int length = text.length();
+        for(int i = 0; i < length; i++){
+            byte[] req  = (text.charAt(i) + "").getBytes();
+            ByteBuf message = Unpooled.buffer(req.length).writeBytes(req);
+            ctx.writeAndFlush(message);
+        }
+        byte[] del = Constants.DELIMITER.getBytes();
+        ByteBuf msg = Unpooled.buffer(del.length).writeBytes(del);
+        ctx.writeAndFlush(msg);
+
     }
 
     /**
@@ -33,13 +43,8 @@ public class DelimiterClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg)
             throws Exception {
-        //ChannelHandlerContext提供各种不同的操作用于触发不同的I/O时间和操作
-        //调用write方法来逐字返回接收到的信息
-        //这里我们不需要在DISCARD例子当中那样调用释放，因为Netty会在写的时候自动释放
-        //只调用write是不会释放的，它会缓存，直到调用flush
         System.out.println("=============");
         System.out.println(msg.toString());
-        ctx.close();
     }
 
     @Override
