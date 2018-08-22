@@ -39,21 +39,23 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
  */
 public final class EchoClient {
 
-    static final boolean SSL = System.getProperty("ssl") != null;
-    static final String HOST = System.getProperty("host", Constants.HOST);
-    static final int PORT = Integer.parseInt(System.getProperty("port", Constants.ECHOPORT + ""));
-    static final int SIZE = Integer.parseInt(System.getProperty("size", "256"));
+    static final String HOST = Constants.HOST;
+    static final int PORT = Constants.ECHOPORT;
+
 
     public static void main(String[] args) throws Exception {
-        // Configure SSL.git
-
-        // Configure the client.
+        //初始化处理Channel事件的EventLoopGroup
         EventLoopGroup group = new NioEventLoopGroup();
         try {
+            //初始化引导类
             Bootstrap b = new Bootstrap();
+            //设置EventLoopGroup
             b.group(group)
+             //设置主通道的channel类
              .channel(NioSocketChannel.class)
+             //设置channel的一些参数
              .option(ChannelOption.TCP_NODELAY, true)
+             //设置将被添加到ChannelPipeline以接受事件的ChannelHandler
              .handler(new ChannelInitializer<SocketChannel>() {
                  @Override
                  public void initChannel(SocketChannel ch) throws Exception {
@@ -64,10 +66,10 @@ public final class EchoClient {
                  }
              });
 
-            // Start the client.
+            // 连接到远程服务器
             ChannelFuture f = b.connect(HOST, PORT).sync();
 
-            // Wait until the connection is closed.
+            // 阻塞直到连接关闭
             f.channel().closeFuture().sync();
         } finally {
             // Shut down the event loop to terminate all threads.

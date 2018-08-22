@@ -38,21 +38,23 @@ import io.netty.handler.ssl.util.SelfSignedCertificate;
  */
 public final class EchoServer {
 
-    static final boolean SSL = System.getProperty("ssl") != null;
-    static final int PORT = Integer.parseInt(System.getProperty("port", Constants.ECHOPORT + ""));
+    static final int PORT = Constants.ECHOPORT;
 
     public static void main(String[] args) throws Exception {
-        // Configure SSL.
 
-        // Configure the server.
+        //初始化处理Channel事件的EventLoopGroup，bossGroup用于监听连接，workerGroup用于处理I/O
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
+            //初始化服务端的引导类
             ServerBootstrap b = new ServerBootstrap();
+            //设置EventLoopGroup
             b.group(bossGroup, workerGroup)
+             //设置主通道的channel类
              .channel(NioServerSocketChannel.class)
              .handler(new LoggingHandler(LogLevel.INFO))
+             //设置将被添加到ChannelPipeline以接受事件的ChannelHandler
              .childHandler(new ChannelInitializer<SocketChannel>() {
                  @Override
                  public void initChannel(SocketChannel ch) throws Exception {
