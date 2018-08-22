@@ -46,13 +46,6 @@ public final class EchoClient {
 
     public static void main(String[] args) throws Exception {
         // Configure SSL.git
-        final SslContext sslCtx;
-        if (SSL) {
-            sslCtx = SslContextBuilder.forClient()
-                .trustManager(InsecureTrustManagerFactory.INSTANCE).build();
-        } else {
-            sslCtx = null;
-        }
 
         // Configure the client.
         EventLoopGroup group = new NioEventLoopGroup();
@@ -65,10 +58,6 @@ public final class EchoClient {
                  @Override
                  public void initChannel(SocketChannel ch) throws Exception {
                      ChannelPipeline p = ch.pipeline();
-                     if (sslCtx != null) {
-                         p.addLast(sslCtx.newHandler(ch.alloc(), HOST, PORT));
-                     }
-                     //p.addLast(new LoggingHandler(LogLevel.INFO));
                      p.addLast(new StringDecoder());
                      p.addLast(new StringEncoder());
                      p.addLast(new EchoClientHandler());

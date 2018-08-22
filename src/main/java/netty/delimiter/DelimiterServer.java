@@ -27,12 +27,11 @@ public class DelimiterServer implements Runnable{
     public void run(){
 
         Integer homeDotPort = Constants.DELIMITERPORT;
-        //Integer homeDotPort = 5600;
 
         System.err.println("Start server at port:" + homeDotPort);
 
         // Configure the bootstrap.
-        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+        EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap b = new ServerBootstrap();
