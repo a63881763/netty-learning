@@ -27,17 +27,8 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
  */
 public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 
-//    private final ByteBuf firstMessage;
     private static volatile int index = 1;
-//    /**
-//     * Creates a client-side handler.
-//     */
-//    public EchoClientHandler() {
-//        firstMessage = Unpooled.buffer(EchoClient.SIZE);
-//        for (int i = 0; i < firstMessage.capacity(); i ++) {
-//            firstMessage.writeByte((byte) i);
-//        }
-//    }
+
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
@@ -45,21 +36,23 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws InterruptedException {
+        System.out.println(msg.toString());
         if(index > 10){
             System.out.println("=================");
-            System.out.println("10 times");
+            System.out.println("done");
+            ctx.close();
             return;
         }
         ++index;
-        ctx.write("echo:" + index);
-        System.out.println(msg.toString());
+        Thread.sleep(1000);
+        ctx.writeAndFlush("echo:" + index);
     }
 
-    @Override
-    public void channelReadComplete(ChannelHandlerContext ctx) {
-       ctx.flush();
-    }
+//    @Override
+//    public void channelReadComplete(ChannelHandlerContext ctx) {
+//       ctx.flush();
+//    }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
