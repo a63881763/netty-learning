@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class DelimiterClientHandler extends ChannelInboundHandlerAdapter {
 
-    private static final String text = "白日依山尽，黄河入海流。欲穷千里目，更上一层楼。";
+    private static final String text = "白日依山尽，\n黄河入海流。\n欲穷千里目，\n更上一层楼。\n";
 
 //    private static final String text = "{a:1,b:2}{c:3,d:4}";
     /**

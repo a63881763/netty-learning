@@ -32,6 +32,8 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
+        ctx.write("echo:" + index);
+        ctx.flush();
         ctx.writeAndFlush("echo:" + index);
     }
 

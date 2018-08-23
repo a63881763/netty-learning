@@ -28,9 +28,9 @@ public class DelimiterServerInitializer extends ChannelInitializer<SocketChannel
                 //JSON分隔符
 //                new JsonObjectDecoder(),
                 //行分隔符
-//                new LineBasedFrameDecoder(1024),
+                new LineBasedFrameDecoder(1024),
                 //分隔符解码器，最大长度6KB
-                new DelimiterBasedFrameDecoder(6144,byteBuf),
+//                new DelimiterBasedFrameDecoder(6144,byteBuf),
                 //字符串识别，将比特流转换成字符串，可选传入字符串编码参数
                 new StringDecoder(),
                 new StringEncoder(),
